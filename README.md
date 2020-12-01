@@ -4,9 +4,9 @@ SpacePing is a network utility that is written using SpaceSockets2 networking li
 ### Building SpacePing
 You can build SpacePing as same effort as a "hello world" application.
 
-´´´
+```
 g++ SpacePing.cpp -o spaceping
-´´´
+```
 #### Disclaimer
 SpacePing is licensed under the terms of MIT License. 
 
