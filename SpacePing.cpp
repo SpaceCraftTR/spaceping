@@ -7,7 +7,7 @@ SpacePing is a ping clone that is built with SpaceSockets2 library.
 2020, Ali Sancakli <spacecraft.tr@gmail.com>
 
 */
-#include "../spacesockets2/SpaceSockets2.hpp"
+#include "spacesockets2/SpaceSockets2.hpp"
 
 void ping_req(char ip_address[], int pkg_amount = 5){
 
