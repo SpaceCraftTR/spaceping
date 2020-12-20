@@ -53,25 +53,26 @@ int main(int argc, char* argv[]){
 
         char ip_addr[20];
         strcpy(ip_addr,argv[argc-1]);
-        ping_req(ip_addr);
+        ping_req(SpaceSockets2::dns_resolve(ip_addr));
     }
     else{
         char ip_address[20];
         int amount = 1;
         std::cout<<"Please enter the IP address that you want to send ping request to, or enter -1 to terminate SpacePing."<<std::endl;
         std::cin>>ip_address;
-        std::cout<<"Please enter the amount of packages that will be send to "<<ip_address<<std::endl;
-        std::cin>>amount;
-        if(strcmp(ip_address,"-1") == 0){
+                if(strcmp(ip_address,"-1") == 0){
 
                 std::cout<<"Aborting."<<std::endl;
                 return -1;
 
         }
-        else{
+        std::cout<<"Please enter the amount of packages that will be send to "<<ip_address<<std::endl;
+        std::cin>>amount;
+
+        
                 ping_req(SpaceSockets2::dns_resolve(ip_address), amount);
 
-        }
+        
 
 
 
