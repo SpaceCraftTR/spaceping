@@ -69,7 +69,7 @@ int main(int argc, char* argv[]){
 
         }
         else{
-                ping_req(ip_address, amount);
+                ping_req(SpaceSockets2::dns_resolve(ip_address), amount);
 
         }
 
